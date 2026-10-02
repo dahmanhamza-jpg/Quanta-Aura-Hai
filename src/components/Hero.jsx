@@ -82,7 +82,6 @@ export default function Hero() {
         <h1>TU PENSA AI CLIENTI.<br/><span>AL MARKETING PENSIAMO NOI.</span></h1>
         <p className="hero-copy">Strategia, contenuti, video, advertising e digital experience per trasformare la presenza online della tua attività in qualcosa che le persone notano, ricordano e scelgono.</p>
         <div className="hero-actions">
-          <a className="button button-primary" href="#contatti">PARLIAMO DEL TUO PROGETTO →</a>
           <a className="button button-ghost" href="#cosa-facciamo">SCOPRI COSA FACCIAMO</a>
         </div>
       </div>
