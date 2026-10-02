@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import { IntroStatement, SocialJobStatement, ContentShowcase, ShootingSection, WorkflowDetails } from './components/StorySections'
-import { Process, Services, Requirements, WeVsYou } from './components/ProcessServices'
-import { AdvertisingLead, WebServices, ResultsWorks, IndustriesFaq, Contact } from './components/ResultsContact'
+import { IntroStatement, ContentShowcase, ShootingSection, WorkflowDetails } from './components/StorySections'
+import { Services, Requirements, WeVsYou } from './components/ProcessServices'
+import { AdvertisingLead, WebServices, ResultsWorks, PortfolioEnd } from './components/ResultsContact'
 
 export default function App() {
   useEffect(() => {
@@ -37,19 +37,16 @@ export default function App() {
       <main>
         <Hero />
         <IntroStatement />
-        <SocialJobStatement />
+        <Services />
         <ContentShowcase />
         <ShootingSection />
         <WorkflowDetails />
-        <Process />
-        <Services />
-        <Requirements />
-        <WeVsYou />
         <AdvertisingLead />
         <WebServices />
         <ResultsWorks />
-        <IndustriesFaq />
-        <Contact />
+        <Requirements />
+        <WeVsYou />
+        <PortfolioEnd />
       </main>
     </div>
   )
