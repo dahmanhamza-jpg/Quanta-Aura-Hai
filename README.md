@@ -1,6 +1,6 @@
 # Marketero Agency
 
-Single-page creative agency website rebuilt from the previous Quanta Aura Hai frontend while preserving the existing Vite/Cloudflare deployment architecture.
+Premium single-page creative agency website built with React + Vite and deployed through the repository's existing Cloudflare static-asset configuration.
 
 ## Development
 
@@ -16,4 +16,4 @@ The form intentionally does **not** fake a successful submission. Set `VITE_CONT
 
 ## Data integrity
 
-Metrics, case-study results and work outcomes are explicit placeholders until verified real data is provided.
+Metrics, case-study results and work outcomes remain explicit placeholders until verified real data is provided.
