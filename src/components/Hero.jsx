@@ -42,7 +42,7 @@ export default function Hero() {
     <section className="hero" id="top" ref={stageRef}>
       <div className="hero-intro" aria-hidden="true"><span>MARKETERO</span></div>
       <div className="hero-corners hero-corners-top">
-        <span>MARKETERO AGENCY<small>CREATIVE / SOCIAL / GROWTH</small></span>
+        <span>MARKETERO AGENCY<small>PORTFOLIO / SERVICES</small></span>
         <span>[ 2026 ]</span>
         <span>CONTENT / ADS / WEB</span>
       </div>
@@ -58,20 +58,18 @@ export default function Hero() {
             <div key={card.label} className={card.cls} style={{ '--order': index }}>
               <div className="card-no">0{index + 1}</div>
               <div className="card-visual"><span>{card.meta}</span></div>
-              <div className="card-caption"><strong>{card.label}</strong><span>SELECTED WORK</span></div>
+              <div className="card-caption"><strong>{card.label}</strong><span>CAPABILITY</span></div>
             </div>
           ))}
           <div className="hero-phone">
             <div className="phone-bar"><span>9:41</span><span>● ● ●</span></div>
             <div className="phone-word">MAKE</div>
-            <div className="phone-screen-grid">
-              <i /><i /><i /><i />
-            </div>
+            <div className="phone-screen-grid"><i /><i /><i /><i /></div>
             <div className="phone-ui"><span>◼</span><span>◌</span><b>+</b><span>◇</span><span>•••</span></div>
           </div>
         </div>
 
-        <div className="hero-badge"><strong>20<br/>26</strong><span>selected<br/>capabilities</span></div>
+        <div className="hero-badge"><strong>20<br/>26</strong><span>portfolio<br/>services</span></div>
         <div className="hero-capabilities">
           <span>Social Strategy</span><span>Content Production</span><span>Advertising</span><span>Web Experience</span>
         </div>
@@ -79,8 +77,8 @@ export default function Hero() {
 
       <div className="hero-message">
         <p className="kicker">CONTENT. STRATEGY. GROWTH.</p>
-        <h1>TU PENSA AI CLIENTI.<br/><span>AL MARKETING PENSIAMO NOI.</span></h1>
-        <p className="hero-copy">Strategia, contenuti, video, advertising e digital experience per trasformare la presenza online della tua attività in qualcosa che le persone notano, ricordano e scelgono.</p>
+        <h1>DALLE IDEE AI CONTENUTI.<br/><span>DAI CONTENUTI ALLA CRESCITA.</span></h1>
+        <p className="hero-copy">Strategia, social, video, advertising e web design. Qui trovi in modo semplice cosa facciamo, come lavoriamo e cosa ci serve per partire.</p>
         <div className="hero-actions">
           <a className="button button-ghost" href="#cosa-facciamo">SCOPRI COSA FACCIAMO</a>
         </div>
