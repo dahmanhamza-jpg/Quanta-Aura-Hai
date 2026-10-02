@@ -73,7 +73,6 @@ export default function Header() {
           {navItems.map(([id, label], index) => (
             <button key={id} style={{ '--menu-delay': `${0.12 + index * 0.06}s` }} onClick={() => goTo(id)}><span>0{index + 1}</span>{label}</button>
           ))}
-          <button className="mobile-menu-cta" onClick={() => goTo('contatti')}>PARLIAMO DEL TUO PROGETTO →</button>
         </div>
       </div>
     </header>
