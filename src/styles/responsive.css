@@ -97,6 +97,11 @@
   .shooting-copy h2 span { font-size: .42em; }
   .shooting-copy > p:last-child { font-size: 15px; }
   .shooting-frame { inset: 18px; }
+  .workflow-panel { min-height: 430px; padding: 20px; grid-template-columns: 1fr; gap: 26px; }
+  .workflow-index { margin-bottom: 20px; }
+  .workflow-panel h2 { font-size: clamp(52px, 15vw, 82px); }
+  .workflow-panel > p:last-child { font-size: 15px; }
+  .edit-timeline span { width: 100%; min-width: 0; }
   .process-heading h2 { font-size: clamp(54px, 15vw, 80px); }
   .process-stack { margin-top: 60px; }
   .process-card { position: relative; top: auto; min-height: 360px; margin-bottom: 16px; padding: 20px; border-radius: 20px; transform: none; }
