@@ -4,27 +4,14 @@ import { productionStates } from '../data'
 export function IntroStatement() {
   return (
     <section className="intro-statement section-pad reveal-section" id="cosa-facciamo">
-      <div className="section-number">01 / POSITIONING</div>
+      <div className="section-number">01 / COSA FACCIAMO</div>
       <div className="statement-grid">
-        <h2><span>NON TI SERVONO</span><br/>PIÙ POST.<br/><em>TI SERVE UNA STRATEGIA.</em></h2>
+        <h2><span>PRIMA STRATEGIA.</span><br/>POI CONTENUTI.<br/><em>POI DISTRIBUZIONE.</em></h2>
         <div className="statement-copy">
-          <p>Creiamo contenuti pensati per attirare attenzione, costruire fiducia e trasformare chi guarda in potenziali clienti.</p>
-          <div className="mini-flow"><span>ATTENZIONE</span><b>→</b><span>FIDUCIA</span><b>→</b><span>RICHIESTA</span></div>
+          <p>Studiamo attività, obiettivi e pubblico. Poi trasformiamo la direzione in contenuti, campagne e presenza digitale coerente.</p>
+          <div className="mini-flow"><span>STRATEGIA</span><b>→</b><span>PRODUZIONE</span><b>→</b><span>PUBBLICAZIONE</span><b>→</b><span>CRESCITA</span></div>
         </div>
       </div>
-    </section>
-  )
-}
-
-export function SocialJobStatement() {
-  return (
-    <section className="social-job full-stage reveal-section">
-      <div className="section-number light">02 / WHY</div>
-      <div className="social-job-copy">
-        <h2>I SOCIAL NON DEVONO<br/>DIVENTARE IL TUO<br/><span>SECONDO LAVORO.</span></h2>
-        <div className="job-reveal"><span>QUESTO È IL NOSTRO.</span></div>
-      </div>
-      <div className="huge-outline-word" aria-hidden="true">SOCIAL</div>
     </section>
   )
 }
@@ -36,10 +23,7 @@ export function ContentShowcase() {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const index = Number(entry.target.dataset.index)
-          setActive(index)
-        }
+        if (entry.isIntersecting) setActive(Number(entry.target.dataset.index))
       })
     }, { rootMargin: '-40% 0px -40% 0px', threshold: 0.01 })
 
@@ -49,11 +33,11 @@ export function ContentShowcase() {
 
   return (
     <section className="content-showcase section-pad" aria-labelledby="content-title">
-      <div className="section-number">03 / CONTENT PRODUCTION</div>
+      <div className="section-number">03 / PRODUZIONE CONTENUTI</div>
       <div className="content-heading reveal-section">
-        <p className="kicker dark">DALL'IDEA AL CLIENTE.</p>
+        <p className="kicker dark">DAL PIANO ALLA PUBBLICAZIONE.</p>
         <h2 id="content-title">UNA SESSIONE.<br/><span>SETTIMANE DI CONTENUTI.</span></h2>
-        <p>Idea → Content → Distribution → Cliente. Noi costruiamo la macchina, tu ci metti il volto.</p>
+        <p>Idea → shooting → editing → pubblicazione → analisi. Un flusso semplice, organizzato e ripetibile.</p>
       </div>
 
       <div className="content-story">
@@ -68,24 +52,15 @@ export function ContentShowcase() {
               <span className="prod-visual-label">{productionStates[active].label}</span>
               <div className="prod-grid"><i/><i/><i/><i/></div>
             </div>
-            <div className="prod-copy">
-              <strong>{productionStates[active].label}</strong>
-              <p>{productionStates[active].detail}</p>
-            </div>
+            <div className="prod-copy"><strong>{productionStates[active].label}</strong><p>{productionStates[active].detail}</p></div>
             <div className="prod-nav"><span>●</span><span>◌</span><b>+</b><span>◇</span><span>•••</span></div>
           </div>
         </div>
 
         <div className="production-steps">
           {productionStates.map((item, index) => (
-            <article
-              key={item.id}
-              className={`production-step ${active === index ? 'is-active' : ''}`}
-              data-index={index}
-              ref={(el) => { stepRefs.current[index] = el }}
-            >
-              <span>{item.id}</span>
-              <div><h3>{item.label}</h3><p>{item.detail}</p></div>
+            <article key={item.id} className={`production-step ${active === index ? 'is-active' : ''}`} data-index={index} ref={(el) => { stepRefs.current[index] = el }}>
+              <span>{item.id}</span><div><h3>{item.label}</h3><p>{item.detail}</p></div>
             </article>
           ))}
         </div>
@@ -101,7 +76,7 @@ export function ShootingSection() {
       <div className="shooting-copy">
         <p className="kicker">SHOOTING / ON LOCATION</p>
         <h2>ORE.<br/><span>UN MESE DI CONTENUTI.</span></h2>
-        <p>Veniamo direttamente nell’attività una o due volte al mese. Organizziamo sessioni efficienti e registriamo il materiale necessario per alimentare settimane di contenuti.</p>
+        <p>Veniamo nell’attività una o due volte al mese, organizziamo la sessione e registriamo il materiale necessario per alimentare settimane di contenuti.</p>
       </div>
       <div className="shooting-frame" aria-hidden="true"><span>REC</span><b>00:42:16</b><i /></div>
     </section>
@@ -111,17 +86,17 @@ export function ShootingSection() {
 export function WorkflowDetails() {
   const editing = ['MONTAGGIO', 'SOTTOTITOLI', 'SOUND DESIGN', 'COLOR CORRECTION', 'MOTION GRAPHICS', 'PACING', 'HOOK', 'RETENTION']
   return (
-    <section className="workflow-details section-pad" aria-label="Strategia, script, editing e pubblicazione">
-      <div className="section-number">03B / FROM STRATEGY TO PUBLISH</div>
+    <section className="workflow-details section-pad" id="metodo" aria-label="Come lavoriamo">
+      <div className="section-number">04 / COME LAVORIAMO</div>
       <article className="workflow-panel workflow-strategy reveal-section">
         <span className="workflow-index">01 / STRATEGIA</span>
         <div><p className="kicker dark">PRIMA IL PERCHÉ.</p><h2>NON PARTIAMO<br/>DAI CONTENUTI.</h2></div>
-        <p>Partiamo dal motivo per cui quei contenuti devono esistere. Studiamo attività, clienti, mercato, competitor, obiettivi e posizionamento.</p>
+        <p>Partiamo da attività, obiettivi, pubblico, mercato, competitor e posizionamento. Da qui decidiamo cosa comunicare e perché.</p>
       </article>
       <article className="workflow-panel workflow-script reveal-section">
         <span className="workflow-index">02 / SCRIPT</span>
-        <div><p className="kicker">NOI PENSIAMO A COSA DIRE.</p><h2>TU DEVI<br/><em>SOLO DIRLO.</em></h2></div>
-        <div className="workflow-tags">{['IDEE', 'FORMAT', 'HOOK', 'SCRIPT', 'STORYTELLING', 'CALL TO ACTION'].map((item) => <span key={item}>{item}</span>)}</div>
+        <div><p className="kicker">NOI PREPARIAMO COSA DIRE.</p><h2>TU DEVI<br/><em>SOLO DIRLO.</em></h2></div>
+        <div className="workflow-tags">{['IDEE', 'FORMAT', 'HOOK', 'SCRIPT', 'STORYTELLING', 'CTA'].map((item) => <span key={item}>{item}</span>)}</div>
       </article>
       <article className="workflow-panel workflow-editing reveal-section">
         <span className="workflow-index">03 / EDITING</span>
@@ -130,8 +105,8 @@ export function WorkflowDetails() {
       </article>
       <article className="workflow-panel workflow-publish reveal-section">
         <span className="workflow-index">04 / PUBBLICAZIONE</span>
-        <div><p className="kicker dark">NON TI LASCIAMO UN FILE.</p><h2>LO PORTIAMO<br/><em>FINO ONLINE.</em></h2></div>
-        <p>Calendario, caption, programmazione, pubblicazione e ottimizzazione. Il contenuto non finisce quando esce dall’editing.</p>
+        <div><p className="kicker dark">FINO ALLA PUBBLICAZIONE.</p><h2>UN FLUSSO<br/><em>COMPLETO.</em></h2></div>
+        <p>Calendario, caption, programmazione, pubblicazione e ottimizzazione: il lavoro continua anche dopo il montaggio.</p>
       </article>
     </section>
   )
