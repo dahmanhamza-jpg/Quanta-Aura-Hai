@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import { IntroStatement, SocialJobStatement, ContentShowcase, ShootingSection } from './components/StorySections'
+import { IntroStatement, SocialJobStatement, ContentShowcase, ShootingSection, WorkflowDetails } from './components/StorySections'
 import { Process, Services, Requirements, WeVsYou } from './components/ProcessServices'
 import { AdvertisingLead, WebServices, ResultsWorks, IndustriesFaq, Contact } from './components/ResultsContact'
 
@@ -40,6 +40,7 @@ export default function App() {
         <SocialJobStatement />
         <ContentShowcase />
         <ShootingSection />
+        <WorkflowDetails />
         <Process />
         <Services />
         <Requirements />
