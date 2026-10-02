@@ -1,6 +1,8 @@
-# Marketero Agency
+# Marketero Agency — Portfolio
 
-Premium single-page creative agency website built with React + Vite and deployed through the repository's existing Cloudflare static-asset configuration.
+Presentation-only portfolio built with React + Vite and deployed through the repository's existing Cloudflare configuration.
+
+The experience is designed to be shown directly to clients during meetings. It focuses on services, workflow, examples and what is needed to work together. It does not include forms, contact capture or data-collection flows.
 
 ## Development
 
@@ -10,10 +12,6 @@ npm run dev
 npm run build
 ```
 
-## Contact form
+## Content integrity
 
-The form intentionally does **not** fake a successful submission. Set `VITE_CONTACT_ENDPOINT` to a real form endpoint (Formspree, custom Worker/API, etc.) to enable delivery.
-
-## Data integrity
-
-Metrics, case-study results and work outcomes remain explicit placeholders until verified real data is provided.
+Examples are clearly presented as examples and do not claim unverified client results.
