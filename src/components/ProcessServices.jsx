@@ -11,9 +11,12 @@ export function Process() {
       </div>
       <div className="process-stack">
         {processSteps.map((step, index) => (
-          <article className={`process-card process-card-${index + 1}`} key={step.id} style={{ '--index': index }}>
+          <article className={`process-card process-card-${index + 1}`} key={step.id} style={{ '--stack-offset': `${index * 14}px`, '--stack-rotation': `${(index - 2) * 0.45}deg` }}>
             <div className="process-meta"><span>{step.id}</span><span>MARKETERO / METHOD</span></div>
-            <div className="process-card-body"><h3>{step.title}</h3><p>{step.copy}</p></div>
+            <div className="process-card-body">
+              <h3>{step.title}</h3>
+              <p>{step.copy}</p>
+            </div>
             <div className="process-corner">{index + 1}</div>
           </article>
         ))}
@@ -55,9 +58,14 @@ export function Requirements() {
   return (
     <section className="requirements section-pad reveal-section">
       <div className="section-number">06 / INPUT</div>
-      <div className="requirements-heading"><p className="kicker dark">DI COSA ABBIAMO BISOGNO</p><h2>A NOI<br/><span>SERVE POCO.</span></h2></div>
+      <div className="requirements-heading">
+        <p className="kicker dark">DI COSA ABBIAMO BISOGNO</p>
+        <h2>A NOI<br/><span>SERVE POCO.</span></h2>
+      </div>
       <div className="requirements-list">
-        {items.map(([id, title, copy]) => <article key={id}><span>{id}</span><h3>{title}</h3><p>{copy}</p></article>)}
+        {items.map(([id, title, copy]) => (
+          <article key={id}><span>{id}</span><h3>{title}</h3><p>{copy}</p></article>
+        ))}
       </div>
     </section>
   )
@@ -67,8 +75,15 @@ export function WeVsYou() {
   const tasks = ['STRATEGIA', 'IDEE', 'SCRIPT', 'SHOOTING', 'MONTAGGIO', 'CAPTION', 'PROGRAMMAZIONE', 'PUBBLICAZIONE', 'ADVERTISING', 'ANALISI']
   return (
     <section className="we-you full-stage" aria-label="Noi contro tu">
-      <div className="we-side"><div className="we-label">NOI</div><div className="task-cloud">{tasks.map((task, index) => <span key={task} style={{ '--i': index }}>{task}</span>)}</div></div>
-      <div className="you-side"><div className="we-label">TU</div><h2>GESTISCI<br/>I CLIENTI.</h2><p>NOI GESTIAMO IL RESTO.</p></div>
+      <div className="we-side">
+        <div className="we-label">NOI</div>
+        <div className="task-cloud">{tasks.map((task, index) => <span key={task} style={{ '--task-shift': `${index * 5}px` }}>{task}</span>)}</div>
+      </div>
+      <div className="you-side">
+        <div className="we-label">TU</div>
+        <h2>GESTISCI<br/>I CLIENTI.</h2>
+        <p>NOI GESTIAMO IL RESTO.</p>
+      </div>
     </section>
   )
 }
