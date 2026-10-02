@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://quanta-aura-haix.pages.dev/sitemap.xml
