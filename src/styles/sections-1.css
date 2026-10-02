@@ -71,6 +71,24 @@
 .shooting-frame span::before { content: ''; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: white; margin-right: 7px; }
 .shooting-frame b { position: absolute; bottom: 20px; left: 24px; font-size: 11px; letter-spacing: .1em; }
 
+.workflow-details { background: #d9d8d3; color: var(--black); display: grid; gap: 20px; }
+.workflow-panel { position: relative; min-height: 520px; padding: 30px; border: 1px solid rgba(10,10,10,.16); border-radius: 28px; overflow: hidden; display: grid; grid-template-columns: 150px 1.2fr .8fr; gap: 42px; align-items: end; }
+.workflow-index { align-self: start; font-size: 10px; letter-spacing: .12em; }
+.workflow-panel h2 { margin: 0; font-size: clamp(62px, 7vw, 118px); line-height: .78; letter-spacing: -.075em; }
+.workflow-panel h2 em { font-family: Georgia, serif; font-weight: 400; }
+.workflow-panel > p:last-child { margin: 0; max-width: 520px; font-size: 18px; line-height: 1.5; }
+.workflow-strategy { background: #f2f1ec; }
+.workflow-script { background: #111; color: white; }
+.workflow-script h2 em { color: var(--orange); }
+.workflow-tags { align-self: end; display: flex; flex-wrap: wrap; gap: 8px; }
+.workflow-tags span { border: 1px solid rgba(255,255,255,.25); border-radius: 999px; padding: 10px 13px; font-size: 9px; letter-spacing: .1em; }
+.workflow-editing { background: var(--orange); color: white; grid-template-columns: 150px .9fr 1.1fr; }
+.edit-timeline { align-self: stretch; display: flex; flex-direction: column; justify-content: center; gap: 8px; }
+.edit-timeline span { width: var(--w); min-width: 58%; height: 38px; padding: 0 12px; display: flex; align-items: center; gap: 12px; background: rgba(10,10,10,.88); border-radius: 8px; font-size: 9px; letter-spacing: .08em; }
+.edit-timeline b { font-size: 8px; opacity: .55; }
+.workflow-publish { background: white; }
+.workflow-publish h2 em { color: var(--orange); }
+
 .process { background: var(--off); color: var(--black); }
 .process-heading h2 { margin: 0; font-size: clamp(64px, 8vw, 134px); line-height: .85; letter-spacing: -.075em; }
 .process-heading h2 span { font-family: Georgia, serif; font-weight: 400; }
