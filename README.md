@@ -1,30 +1,19 @@
-# Quanta Aura Hai?
+# Marketero Agency
 
-Mini web app meme, completamente indipendente da Marketero.
+Single-page creative agency website rebuilt from the previous Quanta Aura Hai frontend while preserving the existing Vite/Cloudflare deployment architecture.
 
-## Stack
-- React
-- Vite
-- CSS moderno
-- Nessun database
-- Nessuna autenticazione
-- Nessuna API key
+## Development
 
-## Avvio locale
 ```bash
 npm install
 npm run dev
-```
-
-## Build
-```bash
 npm run build
 ```
 
-## Cloudflare Pages
-- Framework preset: Vite
-- Build command: `npm run build`
-- Output directory: `dist`
+## Contact form
 
-## Regola speciale
-Il nome `Hamza`, ignorando maiuscole/minuscole e spazi iniziali/finali, mostra sempre una reaction speciale di Cristiano Ronaldo.
+The form intentionally does **not** fake a successful submission. Set `VITE_CONTACT_ENDPOINT` to a real form endpoint (Formspree, custom Worker/API, etc.) to enable delivery.
+
+## Data integrity
+
+Metrics, case-study results and work outcomes are explicit placeholders until verified real data is provided.
