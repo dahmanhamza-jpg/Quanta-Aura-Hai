@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react'
 const navItems = [
   ['cosa-facciamo', 'COSA FACCIAMO'],
   ['servizi', 'SERVIZI'],
-  ['metodo', 'METODO'],
-  ['risultati', 'RISULTATI'],
-  ['contatti', 'CONTATTI'],
+  ['metodo', 'COME LAVORIAMO'],
+  ['lavori', 'ESEMPI'],
+  ['cosa-ci-serve', 'COSA CI SERVE'],
 ]
 
 export default function Header() {
@@ -56,20 +56,20 @@ export default function Header() {
         <span>MARKETERO</span><em>/ AGENCY</em>
       </button>
 
-      <nav className="desktop-nav" aria-label="Navigazione principale">
+      <nav className="desktop-nav" aria-label="Navigazione portfolio">
         {navItems.map(([id, label]) => (
           <button key={id} className={active === id ? 'active' : ''} onClick={() => goTo(id)}>{label}</button>
         ))}
       </nav>
 
-      <button className="nav-cta desktop-only" onClick={() => goTo('contatti')}>PARLIAMONE</button>
+      <span className="desktop-only" aria-hidden="true" />
       <button className={`menu-toggle ${open ? 'is-open' : ''}`} onClick={() => setOpen((value) => !value)} aria-expanded={open} aria-label={open ? 'Chiudi menu' : 'Apri menu'}>
         <span /><span />
       </button>
 
       <div className={`mobile-menu ${open ? 'is-open' : ''}`} aria-hidden={!open}>
         <div className="mobile-menu-inner">
-          <div className="mobile-menu-label">NAVIGATION / 2026</div>
+          <div className="mobile-menu-label">PORTFOLIO / MARKETERO</div>
           {navItems.map(([id, label], index) => (
             <button key={id} style={{ '--menu-delay': `${0.12 + index * 0.06}s` }} onClick={() => goTo(id)}><span>0{index + 1}</span>{label}</button>
           ))}
