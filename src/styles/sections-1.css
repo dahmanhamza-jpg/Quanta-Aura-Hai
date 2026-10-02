@@ -75,7 +75,7 @@
 .process-heading h2 { margin: 0; font-size: clamp(64px, 8vw, 134px); line-height: .85; letter-spacing: -.075em; }
 .process-heading h2 span { font-family: Georgia, serif; font-weight: 400; }
 .process-stack { margin-top: 90px; padding-bottom: 80px; }
-.process-card { position: sticky; top: calc(90px + var(--index) * 14px); min-height: 450px; margin-bottom: 44px; padding: 30px; border-radius: 28px; display: grid; grid-template-rows: auto 1fr; overflow: hidden; border: 1px solid rgba(0,0,0,.14); box-shadow: 0 30px 80px rgba(0,0,0,.12); transform: rotate(calc((var(--index) - 2) * .45deg)); }
+.process-card { position: sticky; top: calc(90px + var(--stack-offset, 0px)); min-height: 450px; margin-bottom: 44px; padding: 30px; border-radius: 28px; display: grid; grid-template-rows: auto 1fr; overflow: hidden; border: 1px solid rgba(0,0,0,.14); box-shadow: 0 30px 80px rgba(0,0,0,.12); transform: rotate(var(--stack-rotation, 0deg)); }
 .process-card-1, .process-card-4 { background: var(--orange); color: white; }
 .process-card-2, .process-card-5 { background: #111; color: white; }
 .process-card-3 { background: #f7f7f4; color: #111; }
