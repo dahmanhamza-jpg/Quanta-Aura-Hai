@@ -1,3 +1,5 @@
 @import './styles/base-hero.css';
-@import './styles/sections.css';
+@import './styles/sections-1.css';
+@import './styles/sections-2.css';
+@import './styles/sections-3.css';
 @import './styles/responsive.css';
